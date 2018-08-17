@@ -37,7 +37,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.smithjw.download.ZoomIT</string>
+	<string>com.github.chefaustin.download.ZoomIT</string>
 	<key>Process</key>
 	<array>
 		<dict>
