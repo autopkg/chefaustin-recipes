@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest Vagrant VMWare Utility and imports into Munki.</string>
+	<key>Identifier</key>
+	<string>io.github.chefaustin.munki.VagrantVMWareUtility</string>
+	<key>Input</key>
+	<dict>
+		<key>DEVELOPER</key>
+		<string>HashiCorp</string>
+		<key>NAME</key>
+		<string>VagrantVMWareUtility</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>applications/Hashicorp/VagrantVMWareUtility</string>
+		<key>MUNKI_CATEGORY</key>
+		<string>Virtualization</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>Interface bridge for VMware virtualization providers and Vagrant.</string>
+			<key>developer</key>
+			<string>%DEVELOPER%</string>
+			<key>display_name</key>
+			<string>Vagrant VMWare Utility</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+			<key>unattended_uninstall</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.2.0</string>
+	<key>ParentRecipe</key>
+	<string>io.github.chefaustin.download.VagrantVMWareUtility</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%pathname%</string>
+				<key>repo_subdirectory</key>
+				<string>%MUNKI_REPO_SUBDIR%</string>
+			</dict>
+			<key>Processor</key>
+			<string>MunkiImporter</string>
+		</dict>
+	</array>
+</dict>
+</plist>
